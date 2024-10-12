@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TZSBarber</title>
+    <!-- Google Fonts link beillesztése -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS beillesztése -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px; /* Nagyobb és vastagabb betű a fejlécben */
+            font-weight: 700;
+        }
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 18px; /* Kisebb, letisztultabb navigációs linkek */
+            font-weight: 400;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #333;
+        }
+        .hero h2 {
+            font-size: 42px; /* Nagyobb betűméret a főcímhez */
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 36px; /* Fejléc szekciókhoz */
+            font-weight: 700;
+        }
+        .container p, form input, form textarea, form select, footer p {
+            font-size: 16px; /* Alap szöveg méret */
+            font-weight: 400;
+        }
+        .booking-form button {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        footer h3 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        footer.contact {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    text-align: center; /* Szöveg középre igazítása */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Elemek középre igazítása */
+    justify-content: center; /* Függőleges középre igazítás */
+}
+    footer h3, footer p {
+    margin: 10px 0;
+    font-size: 18px; /* Méret is állítható itt */
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tar Zsombor Barber Shop</h1>
+    </header>
+
+    <nav>
+        <a href="#galéria">Galéria</a>
+        <a href="#foglalás">Időpont Foglalás</a>
+        <a href="árlista">Árlista</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+    </nav>
+
+    <!-- Kezdőlap szekció (home) -->
+    <section class="hero" id="kezdőlap">
+        <h2></h2>
+    </section>
+        
+
+    <!-- Galéria szekció (gallery) -->
+    <style>
+        .galéria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .galéria img {
+            width: calc(33.33% - 20px); /* 3 kép egymás mellett, 20px távolsággal */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .galéria img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    
+    <section class="container"id="galéria">
+        <h2>Eddigi munkáim</h2>
+        <div class="galéria">
+            <img src="https://freerangestock.com/sample/124326/man-with-mohawk-(hairstyle)-.jpg" alt="Hajvágás 1">
+            <img src="https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/8/2017/12/mohawk-hairstyle-buzzed-side-part-1024x682.jpg" alt="Hajvágás 2">
+            <img src="https://gatsby.ph/upload/redactor/Classic%20Short%20Comb-over%20man%20in%20suit.jpg.jpg" alt="Hajvágás 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_FflWswTCQqbbiuk4PJaL1_73k4VwSrSHYA&s" alt="Hajvágás 4">
+        </div>
+    </section>
+    
+    <!-- Időpontfoglalás szekció (booking) -->
+    <section class="container" id="foglalás">
+        <h2>Időpontfoglalás</h2>
+        <form class="foglalás-form">
+            <input type="text" name="name" placeholder="Név" required>
+            <input type="email" name="email" placeholder="Email-cím" not required>
+            <input type="tel" name="phone" placeholder="Telefonszám" required>
+            <select name="service" required>
+                <option value="hajvágás">Hajvágás</option>
+                <option value="borotválás">Borotválás</option>
+                <option value="mindkettő">Mindkettő</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="További információk"></textarea>
+            <button type="submit">Lefoglalom</button>
+        </form>
+    </section>
+
+    <!-- Kapcsolat szekció (contact) -->
+    <footer class="contact" id="kapcsolat">
+        <h3>Kapcsolatfelvétel</h3>
+        <p>Email: tarzsombor2009@gmail.com</p>
+        <p>Telefonszám: +36 20 746 7727</p>
+    </footer>
+
+</body>
+</html>
