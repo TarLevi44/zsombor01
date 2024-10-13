@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modern Barber Shop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #333;
+        }
+        .hero {
+            background-image: url('your-image-url-here.jpg');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .booking-form button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact {
+            background-color: #333;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .contact h3, .contact p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Barber Shop</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Book an Appointment</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Sharp Cuts, Bold Styles</h2>
+    </section>
+
+    <section class="container">
+        <h2>Gallery of Haircuts</h2>
+        <div class="gallery" id="gallery">
+            <img src="haircut1.jpg" alt="Haircut 1">
+            <img src="haircut2.jpg" alt="Haircut 2">
+            <img src="haircut3.jpg" alt="Haircut 3">
+            <img src="haircut4.jpg" alt="Haircut 4">
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Book an Appointment</h2>
+        <form class="booking-form" id="booking">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="cut">Haircut</option>
+                <option value="shave">Shave</option>
+                <option value="both">Haircut & Shave</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="Additional details"></textarea>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <footer class="contact" id="contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@yourbarbershop.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Follow us on Social Media</p>
+    </footer>
+
+</body>
+</html>
