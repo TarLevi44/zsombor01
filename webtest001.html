@@ -14,7 +14,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #ffffff5b;
             color: #333;
         }
         header {
@@ -99,9 +99,29 @@
         <h2></h2>
     </section>
         
-
+    
+    <style>
+    .service {
+        text-align: center;
+        margin: 20px;
+    }
+    .service img {
+        width: 50px;
+        height: auto;
+    }
+    .service h3 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    </style>
     <!-- Galéria szekció (gallery) -->
     <style>
+        .container h2 {
+            color: #ffffff; /* Fehér szín */
+            font-size: 36px; /* Nagyobb méret */
+            font-weight: 700;
+            text-align: center; /* Középre igazított szöveg */
+        }
         .galéria {
             display: flex;
             flex-wrap: wrap;
@@ -121,12 +141,26 @@
         }
     </style>
     
+
+    <style>
+        body {
+            background-image: url('hatter02.jpg'); /* Path to your image */
+            background-size: cover; /* Ensures the image covers the entire page */
+            background-position: center;
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        </style>
     <section class="container"id="galéria">
         <h2>Eddigi munkáim</h2>
         <div class="galéria">
             <img src="kep01.jpeg" alt="Hajvágás 1">
             <img src="kep02.jpeg" alt="Hajvágás 2">
-            <img src="kep03.jpeg"  alt="Hajvágás 3">
+            <img src="kep03.jpeg" alt="Hajvágás 3">
             <img src="kep04.jpeg" alt="Hajvágás 4">
             <img src="kep05.jpeg" alt="Hajvágás 5">
         </div>
@@ -135,26 +169,50 @@
     <!-- Időpontfoglalás szekció (booking) -->
     <section class="container" id="foglalás">
         <h2>Időpontfoglalás</h2>
-        <form class="foglalás-form">
-            <input type="text" name="name" placeholder="Név" required>
-            <input type="email" name="email" placeholder="Email-cím" not required>
-            <input type="tel" name="phone" placeholder="Telefonszám" required>
-            <select name="service" required>
-                <option value="hajvágás">Hajvágás</option>
-                <option value="borotválás">Borotválás</option>
-                <option value="mindkettő">Mindkettő</option>
-            </select>
-            <textarea name="message" rows="1" placeholder="További információk"></textarea>
-            <button type="submit">Lefoglalom</button>
-        </form>
-    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<form class="foglalás-form">
+    <input type="text" name="name" placeholder="Név" required>
+    <input type="email" name="email" placeholder="Email-cím">
+    <input type="tel" name="phone" placeholder="Telefonszám" required>
+    <input id="datePicker" placeholder="Válasszon dátumot" name="appointmentDate" required>
+    <button type="submit">Lefoglalom</button>
+</form>
+
+
+
+<script>
+    flatpickr("#datePicker", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        minDate: "today"
+    });
+</script>
 
     <!-- Kapcsolat szekció (contact) -->
     <footer class="contact" id="kapcsolat">
         <h3>Kapcsolatfelvétel</h3>
-        <p>Email: tarzsombor2009@gmail.com</p>
+        <p>Email: zsombor4484@gmail.com</p>
         <p>Telefonszám: +36 20 746 7727</p>
+        <div class="social-icons">
+            <a href="https://facebook.com/Zsombey"><img src="E:\weboldal\png-facebook-logo.png" alt="Facebook"></a>
+            <a href="https://instagram.com/zeombor?igsh=cTNqY21MHBjcTI3"><img src="E:\weboldal\png-instagram-logo.png" alt="Instagram"></a>
+        </div>
     </footer>
+    
+    <style>
+    .social-icons {
+        margin-top: 20px;
+    }
+    .social-icons img {
+        width: 40px;
+        height: auto;
+        margin: 0 10px;
+    }
+    </style>
+    
 
 </body>
 </html>
